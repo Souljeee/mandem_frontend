@@ -1,0 +1,50 @@
+.header{
+    background-color: darkgreen;
+    height: 70px;
+    padding-top: 20px;
+}
+
+.item{
+    margin: auto;
+    width: 10%;
+}
+
+#likesButton {
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 23px;
+}
+
+#likesButton:hover {
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+#likesButton:after {
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+#homeButton{
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 40px;
+}
+
+#homeButton:hover {
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+#profileButton{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+#profileButton:hover {
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
