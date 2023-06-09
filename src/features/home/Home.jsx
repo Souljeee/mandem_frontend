@@ -1,5 +1,6 @@
-import Navbar from "../../components/Navbar/Navbar"
-import CandidateInfo from "../../components/сandidate_info/CandidateInfo"
+import Navbar from "../home/components/Navbar/Navbar"
+import CandidateInfo from "../home/components/сandidate_info/CandidateInfo"
+import About from "../home/components/about_candidate/About" 
 import styles from "./Home.module.css"
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <div>
       <Navbar />
       <CandidateInfo />
+      <About />
     </div>
   )
 }

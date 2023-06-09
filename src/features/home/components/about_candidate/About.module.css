@@ -1,0 +1,14 @@
+.aboutMainContainer {
+    border: 3px solid green;
+    border-radius: 12px;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+
+.textContainer{
+    margin: 16px;
+    text-align: justify;
+    text-align-last: center;
+}
