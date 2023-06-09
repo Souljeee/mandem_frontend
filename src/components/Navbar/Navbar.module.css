@@ -5,8 +5,9 @@
 }
 
 .item{
-    margin: auto;
-    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
 }
 
 #likesButton {
