@@ -6,7 +6,7 @@ import styles from "./Home.module.css"
 
 function Home() {
   return (
-    <div>
+    <div className={styles.mainPage}>
       <Navbar />
       <CandidateInfo />
       <ChoisingButtons />
