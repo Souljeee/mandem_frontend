@@ -1,0 +1,14 @@
+.chipBackground{
+    background-color: green;
+    border-radius: 16px;
+    width: fit-content;
+    padding: 5px 10px;
+    height: 20px;
+    color: white;
+    display: inline;
+    margin: 5px;
+}
+
+p{
+    display: inline;
+}
