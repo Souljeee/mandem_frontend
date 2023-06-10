@@ -5,6 +5,8 @@
     height: 400px;
     display: block;
     object-fit: cover;
+    justify-content: center;
+    text-align: center;
 }
 
 .allInfo{
@@ -12,10 +14,13 @@
     width: 20%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    text-align: center;
 }
 
 .shortInfo{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
