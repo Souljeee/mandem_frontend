@@ -3,18 +3,17 @@
 }
 
 .button{
-    background-color: transparent;
+    background-color: green;
     border: none;
     padding: 10px 40px;
     border-radius: 16px;
-    color: green;
+    color: white;
     font-size: 18px;
     display: inline;
 }
 
-.button:hover {
-    background-color: rgb(168, 206, 168);
-    border: none;
+.button:hover{
+    background-color: rgb(87, 163, 87);
 }
 
 .buttonText{

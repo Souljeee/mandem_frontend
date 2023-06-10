@@ -1,6 +1,6 @@
-import styles from "./TextButtom.module.css"
+import styles from "./ActionButton.module.css"
 
-function TextButton({ title }) {
+function ActionButton({title}) {
     return (
         <div className={styles.buttonBackground}>
             <button className={styles.button} onClick={print('CLICKED')}>
@@ -10,4 +10,4 @@ function TextButton({ title }) {
     )
 }
 
-export default TextButton
+export default ActionButton
