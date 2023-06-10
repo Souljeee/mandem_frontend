@@ -11,8 +11,6 @@ function About() {
                         <InterestChip key={interest.id} interest={interest} />
                     </div>
                 ))}
-                 {/* <InterestChip key={interests[0].id} interest={interests[0]} />
-                 <InterestChip key={interests[1].id} interest={interests[1]} /> */}
             </div>
             <div className={styles.textContainer}>
                 <p>Я элегантная Мелисса и чувственная девушка, могу предложить приятное

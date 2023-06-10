@@ -3,6 +3,8 @@
     border-radius: 12px;
     width: 30%;
     margin: 16px auto;
+    text-align: center;
+    justify-content: center;
 }
 
 .textContainer{
@@ -17,4 +19,6 @@
 
 .chips{
     margin-top: 10px;
+    text-align: center;
+    justify-content: center;
 }
