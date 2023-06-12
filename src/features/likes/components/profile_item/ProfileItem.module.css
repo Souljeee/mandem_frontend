@@ -1,0 +1,23 @@
+.photo{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.info{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+.profileCard {
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.profileCard:hover{
+    background-color: rgb(189, 188, 188);
+}

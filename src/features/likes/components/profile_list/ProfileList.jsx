@@ -1,19 +1,19 @@
 import { Row, Col } from 'react-simple-flex-grid';
 import styles from './ProfileList.module.css'
 import "react-simple-flex-grid/lib/main.css";
+import ProfileItem from "../profile_item/ProfileItem"
 
 const ProfileList = () => {
     return <div className={styles.list}>
-        <Row gutter={10} justify={'start'}>
-            <Col span={4}>
-                <div className={styles.banana}>Test</div>
-            </Col>
-            <Col span={4}>
-                <div className={styles.banana}>Test</div>
-            </Col>
-            <Col span={4}>
-                <div className={styles.banana}>Test</div>
-            </Col>
+        <Row className={styles.row} gutter={10} justify={'start'}>
+            {
+                Array.apply(0, Array(10)).map(
+                    element =>
+                        <Col span={4}>
+                            <ProfileItem key={element}/>
+                        </Col>
+                )
+            }
         </Row>
     </div>
 }
