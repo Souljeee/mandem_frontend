@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 function Navbar() {
@@ -5,9 +6,9 @@ function Navbar() {
         <header className={styles.header}>
             <div className={styles.item}>
                 <nav>
-                    <a id={styles.likesButton} href="/likes">Лайки</a>
-                    <a id={styles.homeButton} href="/">Mandem</a>
-                    <a id={styles.profileButton} href="/profile">Профиль</a>
+                    <Link id={styles.likesButton} to="/likes">Лайки</Link>
+                    <Link id={styles.homeButton} to="/">Mandem</Link>
+                    <Link id={styles.profileButton} to="/profile">Профиль</Link>
                 </nav>
             </div>
         </header>
