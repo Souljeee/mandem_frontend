@@ -1,0 +1,75 @@
+.photoContainer {
+    display: inline;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 300px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 60px;
+    object-fit: cover;
+}
+
+.name{
+    display: inline;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+}
+
+.mainInfo{
+    position: relative;
+}
+
+.ageAndSex{
+    position: absolute;
+    display: inline;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.age{
+    display: inline;
+    margin-right: 100px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sex{
+    display: inline;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.locaton{
+    position: absolute;
+    display: inline;
+    margin-top: 130px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.phoneNumber{
+    position: absolute;
+    display: inline;
+    margin-top: 170px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.interestsContainer{
+    position: absolute;
+    display: inline;
+    margin-left: 40px;
+    margin-top: 210px;
+}
+
+.interestsTitle{
+    font-size: 20px;
+    font-weight: 500;
+}
