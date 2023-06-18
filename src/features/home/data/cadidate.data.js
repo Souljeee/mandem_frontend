@@ -2,7 +2,11 @@ export const candidates = [
     {
         id: 1,
         name: 'Анна',
+        surname: 'НеСосала',
         age: 18,
+        sex: 'Женский',
+        country: 'Россия',
+        phone: '+79837658933',
         city: 'Москва',
         interests: [
             {
@@ -28,7 +32,11 @@ export const candidates = [
     {
         id: 2,
         name: 'Галина',
+        surname: 'Чупапи',
         age: 34,
+        sex: 'Женский',
+        phone: '+79837658933',
+        country: 'Россия',
         city: 'Ярославль',
         interests: [
             {
@@ -54,7 +62,11 @@ export const candidates = [
     {
         id: 3,
         name: 'Виктория',
+        surname: 'Сосала',
         age: 22,
+        sex: 'Женский',
+        phone: '+79837658933',
+        country: 'Россия',
         city: 'Оха',
         interests: [
             {

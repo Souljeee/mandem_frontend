@@ -26,8 +26,8 @@ const Router = () => {
                     </LikesProvider>
                 }
             />
-            <Route path='/profile/:id' element={<ProfilePage id={useParams().id}/>} />
-            <Route path='/profile' element={<ProfilePage id={'me'}/>} />
+            <Route path="/profile/:id" element={<ProfilePage />} />
+            <Route path='/profiles' element={<ProfilePage id={'me'}/>} />
             <Route element={<div>Page Not Found</div>} path='*' />
         </Routes>
     </BrowserRouter>

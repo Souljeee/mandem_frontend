@@ -1,12 +1,11 @@
 let instance
 
 export default class LikesStorage{
-    likesArray
+    likesArray = new Array()
 
     constructor(){
         if (instance == null) {
             instance = this
-            instance.likesArray = []
         }
         return instance
     }
@@ -21,5 +20,11 @@ export default class LikesStorage{
 
     getConcreteLikes(position){
         return instance.likesArray[position]
+    }
+
+    getLikesById(id){
+        let index = instance.likesArray.findIndex(element => element.id == id)
+
+        return instance.getConcreteLikes(index)
     }
 }

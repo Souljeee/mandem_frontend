@@ -8,7 +8,7 @@ function Navbar() {
                 <nav>
                     <Link id={styles.likesButton} to="/likes">Лайки</Link>
                     <Link id={styles.homeButton} to="/">Mandem</Link>
-                    <Link id={styles.profileButton} to="/profile">Профиль</Link>
+                    <Link id={styles.profileButton} to="/profiles">Профиль</Link>
                 </nav>
             </div>
         </header>
