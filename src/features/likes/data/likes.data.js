@@ -1,10 +1,10 @@
 let instance
 
-class LikesStorage{
+export default class LikesStorage{
     likesArray = []
 
     constructor(){
-        if (!instance) instance = thiss
+        if (!instance) instance = this
         return instance
     }
 

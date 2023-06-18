@@ -1,9 +1,9 @@
 import styles from "./ProfileItem.module.css"
 
-const ProfileItem = () => {
+const ProfileItem = ({likedProfile}) => {
     return <div className={styles.profileCard}>
-        <img className={styles.photo} src='/women.avif' />
-        <div className={styles.info}>Екатерина, 20 лет, Краснодар</div>
+        <img className={styles.photo} src={candidate.avatarPath} />
+        <div className={styles.info}>{likedProfile.name}, {likedProfile.age} лет, {likedProfile.city}</div>
     </div>
 }
 
