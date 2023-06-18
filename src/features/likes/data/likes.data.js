@@ -16,7 +16,6 @@ export default class LikesStorage{
     }
 
     getAllLikes(){
-        console.log(instance.likesArray)
         return instance.likesArray
     }
 

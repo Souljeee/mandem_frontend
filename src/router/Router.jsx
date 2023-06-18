@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom"
 import Home from "../features/home/Home"
 import LikesPage from "../features/likes/LikesPage"
 import ProfilePage from "../features/profile/ProfilePage"
@@ -26,7 +26,8 @@ const Router = () => {
                     </LikesProvider>
                 }
             />
-            <Route path='/profile' element={<ProfilePage />} />
+            <Route path='/profile/:id' element={<ProfilePage id={useParams().id}/>} />
+            <Route path='/profile' element={<ProfilePage id={'me'}/>} />
             <Route element={<div>Page Not Found</div>} path='*' />
         </Routes>
     </BrowserRouter>
