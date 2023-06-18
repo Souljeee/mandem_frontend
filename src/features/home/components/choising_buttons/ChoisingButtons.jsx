@@ -32,7 +32,7 @@ function ChoisingButtons() {
                             let currentCandidate = candidates[getCurrentIndex()]
                             new LikesStorage().addLikes(currentCandidate)
                             incrementCurrentIndex()
-                            setCandidate(currentCandidate)
+                            setCandidate(candidates[getCurrentIndex()])
                         }
                     }
                 />
