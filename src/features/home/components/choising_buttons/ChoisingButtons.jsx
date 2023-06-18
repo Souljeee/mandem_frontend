@@ -29,7 +29,6 @@ function ChoisingButtons() {
                     title={"Лайк"}
                     onClick={
                         () => {
-                            console.log('banana')
                             let currentCandidate = candidates[getCurrentIndex()]
                             new LikesStorage().addLikes(currentCandidate)
                             incrementCurrentIndex()
