@@ -12,7 +12,9 @@ const Router = () => {
                 path='/'
                 element={
                     <HomeProvider>
-                        <Home />
+                        <LikesProvider>
+                            <Home />
+                        </LikesProvider>
                     </HomeProvider>
                 }
             />

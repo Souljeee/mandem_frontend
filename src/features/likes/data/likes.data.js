@@ -1,10 +1,13 @@
 let instance
 
 export default class LikesStorage{
-    likesArray = []
+    likesArray
 
     constructor(){
-        if (!instance) instance = this
+        if (instance == null) {
+            instance = this
+            instance.likesArray = []
+        }
         return instance
     }
 
@@ -13,11 +16,11 @@ export default class LikesStorage{
     }
 
     getAllLikes(){
+        console.log(instance.likesArray)
         return instance.likesArray
     }
 
     getConcreteLikes(position){
         return instance.likesArray[position]
     }
-
 }

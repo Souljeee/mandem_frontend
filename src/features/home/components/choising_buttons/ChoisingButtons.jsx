@@ -4,9 +4,12 @@ import styles from "./ChoisingButtons.module.css"
 import { useContext } from "react"
 import { HomeContext } from "../../provider/HomeProvider"
 import { candidates, getCurrentIndex, incrementCurrentIndex } from "../../data/cadidate.data"
+import { LikesContext } from '../../../likes/providers/LikesProvider';
+import LikesStorage from '../../../likes/data/likes.data'
 
 function ChoisingButtons() {
     const { candidate, setCandidate } = useContext(HomeContext)
+    const { likes, setLikes } = useContext(LikesContext)
 
     return (
         <div className={styles.backgroundColor}>
@@ -26,8 +29,11 @@ function ChoisingButtons() {
                     title={"Лайк"}
                     onClick={
                         () => {
+                            console.log('banana')
+                            let currentCandidate = candidates[getCurrentIndex()]
+                            new LikesStorage().addLikes(currentCandidate)
                             incrementCurrentIndex()
-                            setCandidate(candidates[getCurrentIndex()])
+                            setCandidate(currentCandidate)
                         }
                     }
                 />
