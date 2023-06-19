@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom"
 import Home from "../features/home/Home"
+import AuthPage from "../features/auth/AuthPage"
 import LikesPage from "../features/likes/LikesPage"
 import ProfilePage from "../features/profile/ProfilePage"
 import HomeProvider from "../features/home/provider/HomeProvider"
@@ -13,7 +14,7 @@ const Router = () => {
                 element={
                     <HomeProvider>
                         <LikesProvider>
-                            <Home />
+                            <AuthPage />
                         </LikesProvider>
                     </HomeProvider>
                 }
