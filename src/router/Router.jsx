@@ -5,6 +5,7 @@ import LikesPage from "../features/likes/LikesPage"
 import ProfilePage from "../features/profile/ProfilePage"
 import HomeProvider from "../features/home/provider/HomeProvider"
 import LikesProvider from "../features/likes/providers/LikesProvider"
+import RegisterPage from "../features/register/RegisterPage"
 
 const Router = () => {
     return <BrowserRouter>
@@ -13,6 +14,12 @@ const Router = () => {
                 path='/auth'
                 element={
                     <AuthPage />
+                }
+            />
+            <Route
+                path='/register'
+                element={
+                    <RegisterPage />
                 }
             />
             <Route

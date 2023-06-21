@@ -21,7 +21,7 @@ const AuthForm = () => {
         </form>
         <footer>
             <div>Нет аккаунта?</div>
-            <Link to={'/profiles'} className={styles.register}>Зарегистрируйтесь прямо сейчас</Link>
+            <Link to={'/register'} className={styles.register}>Зарегистрируйтесь прямо сейчас</Link>
         </footer>
     </div>
 }
