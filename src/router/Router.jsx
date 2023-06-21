@@ -10,11 +10,17 @@ const Router = () => {
     return <BrowserRouter>
         <Routes>
             <Route
+                path='/auth'
+                element={
+                    <AuthPage />
+                }
+            />
+            <Route
                 path='/'
                 element={
                     <HomeProvider>
                         <LikesProvider>
-                            <AuthPage />
+                            <Home />
                         </LikesProvider>
                     </HomeProvider>
                 }
@@ -28,7 +34,7 @@ const Router = () => {
                 }
             />
             <Route path="/profile/:id" element={<ProfilePage />} />
-            <Route path='/profiles' element={<ProfilePage id={'me'}/>} />
+            <Route path='/profiles' element={<ProfilePage id={'me'} />} />
             <Route element={<div>Page Not Found</div>} path='*' />
         </Routes>
     </BrowserRouter>
