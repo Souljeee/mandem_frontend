@@ -33,9 +33,11 @@ const RegisterForm = () => {
             }
         )
 
-        if (user != null) {
-            nav('/auth')
-        }
+        let jsonUser = JSON.stringify(user)
+
+        localStorage.setItem('user', jsonUser)
+
+        nav('/auth')
     }
 
     return <div className={styles.authContent}>

@@ -31,8 +31,12 @@ const AuthForm = () => {
                 onClick={
                     (e) => {
                         e.preventDefault()
-                        
-                        if(user.login === login && user.password === password){
+
+                        let userJson = localStorage.getItem('user')
+
+                        let userSaved = JSON.parse(userJson)
+
+                        if(userSaved.login === login && userSaved.password === password){
                             nav('/')
                         } else {
                             alert("Неверный логин или пароль")
