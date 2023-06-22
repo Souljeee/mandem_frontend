@@ -2,9 +2,13 @@ import styles from "./RegisterFrom.module.css"
 import ActionButton from "../../../../common/action_button/ActionButton"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react"
-import { setUser, user } from "../../static/user"
+import { useContext } from "react"
+import { UserContext } from "../../providers/UserProvider"
 
 const RegisterForm = () => {
+    const { user, setUser } = useContext(UserContext)
+
+    const nav = useNavigate()
 
     const [name, setName] = useState()
     const [age, setAge] = useState()
@@ -13,6 +17,26 @@ const RegisterForm = () => {
     const [sex, setSex] = useState()
     const [login, setLogin] = useState()
     const [password, setPassword] = useState()
+
+    const createUser = e => {
+        e.preventDefault()
+
+        setUser(
+            {
+                name: name,
+                age: age,
+                country: country,
+                city: city,
+                sex: sex,
+                login: login,
+                password: password,
+            }
+        )
+
+        if (user != null) {
+            nav('/auth')
+        }
+    }
 
     return <div className={styles.authContent}>
         <div className={styles.authTitle}>Регистрация</div>
@@ -55,21 +79,7 @@ const RegisterForm = () => {
             <ActionButton
                 title={'Зарегистрироваться'}
                 onClick={
-                    () => {
-                        setUser(
-                            {
-                                name: name,
-                                age: age,
-                                country: country,
-                                city: city,
-                                sex: sex,
-                                login: login,
-                                password: password,
-                            }
-                        )
-
-                        console.log(user)
-                    }
+                    (e) => createUser(e)
                 }
             />
         </form>
