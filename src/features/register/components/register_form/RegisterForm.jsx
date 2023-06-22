@@ -2,12 +2,8 @@ import styles from "./RegisterFrom.module.css"
 import ActionButton from "../../../../common/action_button/ActionButton"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react"
-import { useContext } from "react"
-import { UserContext } from "../../providers/UserProvider"
 
 const RegisterForm = () => {
-    const { user, setUser } = useContext(UserContext)
-
     const nav = useNavigate()
 
     const [name, setName] = useState()
@@ -21,21 +17,33 @@ const RegisterForm = () => {
     const createUser = e => {
         e.preventDefault()
 
-        setUser(
-            {
-                name: name,
-                age: age,
-                country: country,
-                city: city,
-                sex: sex,
-                login: login,
-                password: password,
-            }
-        )
+        let allUsersJson = localStorage.getItem('users')
 
-        let jsonUser = JSON.stringify(user)
+        let allUsers = []
 
-        localStorage.setItem('user', jsonUser)
+        if(allUsersJson != undefined){
+            allUsers = JSON.parse(allUsersJson)
+        }else{
+            allUsers = []
+        }
+
+    
+
+        let userObject =  {
+            name: name,
+            age: age,
+            country: country,
+            city: city,
+            sex: sex,
+            login: login,
+            password: password,
+        }
+
+        let jsonUser = JSON.stringify([...allUsers, userObject])
+
+        localStorage.setItem('users', jsonUser)
+
+        console.log(localStorage.getItem('users'))
 
         nav('/auth')
     }

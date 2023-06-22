@@ -2,16 +2,12 @@ import styles from "./AuthForm.module.css"
 import ActionButton from "../../../../common/action_button/ActionButton"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react"
-import { UserContext } from "../../../register/providers/UserProvider"
-import { useContext } from "react"
 
 const AuthForm = () => {
     const nav = useNavigate()
 
     const [login, setLogin] = useState()
     const [password, setPassword] = useState()
-
-    const { user, setUser } = useContext(UserContext)
 
     return <div className={styles.authContent}>
         <div className={styles.authTitle}>Войти</div>
@@ -32,11 +28,16 @@ const AuthForm = () => {
                     (e) => {
                         e.preventDefault()
 
-                        let userJson = localStorage.getItem('user')
+                        let usersJson = localStorage.getItem('users')
 
-                        let userSaved = JSON.parse(userJson)
+                        let usersSaved = []
 
-                        if(userSaved.login === login && userSaved.password === password){
+                        usersSaved = JSON.parse(usersJson)
+
+                        let currentUser = usersSaved.find(e => e.login === login && e.password);
+                
+                        if(currentUser != undefined){
+                            localStorage.setItem('currentUser', JSON.stringify(currentUser))
                             nav('/')
                         } else {
                             alert("Неверный логин или пароль")
