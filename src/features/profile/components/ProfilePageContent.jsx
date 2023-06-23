@@ -15,6 +15,12 @@ const ProfilePageContent = ({ profileInfo }) => {
         nav('/editProfile')
     }
 
+    const handleExitButtonClick = (e) => {
+        e.preventDefault()
+
+        nav('/auth')
+    }
+
     return <div className={styles.contentContainer}>
         <div className={styles.mainInfoContainer}>
             <div className={styles.photoContainer}>
@@ -23,6 +29,7 @@ const ProfilePageContent = ({ profileInfo }) => {
             <div className={styles.nameAndEdit}>
                 <div className={styles.name}>{userSaved.name}</div>
                 <button className={styles.editButton} onClick={(e) => handleEditButtonClick(e)}>Редактировать</button>
+                <button className={styles.exitButton} onClick={(e) => handleExitButtonClick(e)}>Выйти</button>
             </div>
             <div className={styles.ageAndSex}>
                 <div className={styles.age}>Возраст: {userSaved.age} лет</div>
