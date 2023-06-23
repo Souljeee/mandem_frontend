@@ -84,6 +84,7 @@ const EditForm = () => {
                         about: about,
                         login: currentUser.login,
                         password: currentUser.password,
+                        interests: currentUser.interests,
                     }
 
                     let newUserJSON = JSON.stringify(newUserObject)

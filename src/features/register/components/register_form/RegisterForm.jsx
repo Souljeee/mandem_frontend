@@ -34,6 +34,24 @@ const RegisterForm = () => {
             city: city,
             sex: sex,
             login: login,
+            interests: [
+                {
+                    id: 1,
+                    title: 'Банан'
+                },
+                {
+                    id: 2,
+                    title: 'Яблоко'
+                },
+                {
+                    id: 3,
+                    title: 'Мейлер'
+                },
+                {
+                    id: 4,
+                    title: 'Кайф'
+                },
+            ],
             password: password,
         }
 

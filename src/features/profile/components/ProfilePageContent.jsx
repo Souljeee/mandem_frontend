@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom"
 const ProfilePageContent = ({ profileInfo }) => {
     const nav = useNavigate()
 
-    let userJson = localStorage.getItem('currentUser')
+    let currentUserJSON = localStorage.getItem('currentUser')
 
-    let userSaved = JSON.parse(userJson)
+    let currentUser = JSON.parse(currentUserJSON)
 
     const handleEditButtonClick = (e) => {
         e.preventDefault()
@@ -27,16 +27,22 @@ const ProfilePageContent = ({ profileInfo }) => {
                 <img className={styles.photo} src={profileInfo.avatarPath} />
             </div>
             <div className={styles.nameAndEdit}>
-                <div className={styles.name}>{userSaved.name}</div>
-                <button className={styles.editButton} onClick={(e) => handleEditButtonClick(e)}>Редактировать</button>
-                <button className={styles.exitButton} onClick={(e) => handleExitButtonClick(e)}>Выйти</button>
+                <div className={styles.name}>{profileInfo.name}</div>
+                {
+                    currentUser.name === profileInfo.name ? 
+                    <div className={styles.profileButtons}>
+                        <button className={styles.editButton} onClick={(e) => handleEditButtonClick(e)}>Редактировать</button>
+                        <button className={styles.exitButton} onClick={(e) => handleExitButtonClick(e)}>Выйти</button>
+                    </div> : <div></div>
+            
+                }
             </div>
             <div className={styles.ageAndSex}>
-                <div className={styles.age}>Возраст: {userSaved.age} лет</div>
-                <div className={styles.sex}>Пол: {userSaved.sex}</div>
+                <div className={styles.age}>Возраст: {profileInfo.age} лет</div>
+                <div className={styles.sex}>Пол: {profileInfo.sex}</div>
             </div>
-            <div className={styles.locaton}>Нахожусь: {userSaved.city}, {userSaved.country}</div>
-            <div className={styles.phoneNumber}>Телефон: {userSaved.phone}</div>
+            <div className={styles.locaton}>Нахожусь: {profileInfo.city}, {profileInfo.country}</div>
+            <div className={styles.phoneNumber}>Телефон: {profileInfo.phone}</div>
             <div className={styles.interestsContainer}>
                 <div className={styles.interestsTitle}>Интересы:</div>
                 <div className={styles.chipContainer}>
@@ -49,7 +55,7 @@ const ProfilePageContent = ({ profileInfo }) => {
             </div>
             <div className={styles.aboutInfo}>
                 <div className={styles.aboutTitle}>О себе:</div>
-                <div className={styles.aboutContent}>{userSaved.about}</div>
+                <div className={styles.aboutContent}>{profileInfo.about}</div>
             </div>
         </div>
     </div>

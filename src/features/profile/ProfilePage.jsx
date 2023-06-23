@@ -6,9 +6,13 @@ import { useLocation, useParams } from "react-router-dom"
 
 const ProfilePage = ({ id }) => {
     if (id == 'me') {
+        let userJson = localStorage.getItem('currentUser')
+    
+        let userSaved = JSON.parse(userJson)
+        
         return <div>
             <Navbar />
-            <ProfilePageContent profileInfo={myData}/>
+            <ProfilePageContent profileInfo={userSaved}/>
         </div>
     }
 
