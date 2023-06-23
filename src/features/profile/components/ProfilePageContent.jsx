@@ -11,7 +11,10 @@ const ProfilePageContent = ({ profileInfo }) => {
             <div className={styles.photoContainer}>
                 <img className={styles.photo} src={profileInfo.avatarPath} />
             </div>
-            <div className={styles.name}>{userSaved.name}</div>
+            <div className={styles.nameAndEdit}>
+                <div className={styles.name}>{userSaved.name}</div>
+                <button className={styles.editButton}>Редактировать</button>
+            </div>
             <div className={styles.ageAndSex}>
                 <div className={styles.age}>Возраст: {userSaved.age} лет</div>
                 <div className={styles.sex}>Пол: {userSaved.sex}</div>

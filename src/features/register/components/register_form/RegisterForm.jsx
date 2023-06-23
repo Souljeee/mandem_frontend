@@ -27,8 +27,6 @@ const RegisterForm = () => {
             allUsers = []
         }
 
-    
-
         let userObject =  {
             name: name,
             age: age,

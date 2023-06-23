@@ -11,15 +11,6 @@
     object-fit: cover;
 }
 
-.name {
-    display: inline;
-    margin-top: 20px;
-    margin-left: 40px;
-    font-size: 30px;
-    font-weight: 700;
-    position: absolute;
-}
-
 .mainInfo {
     position: relative;
 }
@@ -29,6 +20,25 @@
     display: inline;
     margin-top: 80px;
     margin-left: 40px;
+}
+
+.nameAndEdit{
+    position: absolute;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.editButton{
+    display: inline;
+}
+
+.name {
+    display: inline;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 50px;
 }
 
 .age {
