@@ -1,8 +1,11 @@
 import { useState } from "react"
 import styles from "./EditForm.module.css"
 import ActionButton from "../../../../common/action_button/ActionButton"
+import { useNavigate } from "react-router-dom"
 
 const EditForm = () => {
+    const nav = useNavigate()
+
     let currentUserJSON = localStorage.getItem('currentUser')
     let currentUser = JSON.parse(currentUserJSON)
 
@@ -86,6 +89,8 @@ const EditForm = () => {
                     let newUserJSON = JSON.stringify(newUserObject)
 
                     localStorage.setItem('currentUser', newUserJSON)
+
+                    nav('/profiles')
                 }}
             />
         </ form>
