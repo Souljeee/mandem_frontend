@@ -7,6 +7,7 @@ import HomeProvider from "../features/home/provider/HomeProvider"
 import LikesProvider from "../features/likes/providers/LikesProvider"
 import RegisterPage from "../features/register/RegisterPage"
 import UserProvider from "../features/register/providers/UserProvider"
+import EditPage from "../features/edit/EditPage"
 
 const Router = () => {
     return <BrowserRouter>
@@ -22,6 +23,12 @@ const Router = () => {
                     path='/register'
                     element={
                         <RegisterPage />
+                    }
+                />
+                <Route
+                    path='/editProfile'
+                    element={
+                        <EditPage />
                     }
                 />
                 <Route

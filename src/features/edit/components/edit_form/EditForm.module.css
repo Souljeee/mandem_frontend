@@ -1,0 +1,68 @@
+.authContent {
+    text-align: center;
+}
+
+.authForm{
+    align-content: center;
+    justify-content: center;
+}
+
+.authTitle {
+    margin-top: 50px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+input {
+    padding: 15px 30px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    outline: none;
+    border: solid 2px green;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
+.generalInfo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.name {
+    display: inline;
+    margin-right: 30px;
+}
+
+.age {
+    display: inline;
+    margin-right: 30px;
+}
+
+.sex {
+    display: inline;
+}
+
+.geo{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.country{
+    display: inline;
+    margin-right: 30px;
+}
+
+.city{
+    display: inline;
+}
+
+.save {
+    margin-left: 200px;
+}

@@ -1,10 +1,19 @@
 import styles from "./ProfilePageContent.module.css"
 import InterestChip from "../../home/components/interest_chip/InterestChip"
+import { useNavigate } from "react-router-dom"
 
 const ProfilePageContent = ({ profileInfo }) => {
-    let userJson = localStorage.getItem('user')
+    const nav = useNavigate()
+
+    let userJson = localStorage.getItem('currentUser')
 
     let userSaved = JSON.parse(userJson)
+
+    const handleEditButtonClick = (e) => {
+        e.preventDefault()
+
+        nav('/editProfile')
+    }
 
     return <div className={styles.contentContainer}>
         <div className={styles.mainInfoContainer}>
@@ -13,14 +22,14 @@ const ProfilePageContent = ({ profileInfo }) => {
             </div>
             <div className={styles.nameAndEdit}>
                 <div className={styles.name}>{userSaved.name}</div>
-                <button className={styles.editButton}>Редактировать</button>
+                <button className={styles.editButton} onClick={(e) => handleEditButtonClick(e)}>Редактировать</button>
             </div>
             <div className={styles.ageAndSex}>
                 <div className={styles.age}>Возраст: {userSaved.age} лет</div>
                 <div className={styles.sex}>Пол: {userSaved.sex}</div>
             </div>
             <div className={styles.locaton}>Нахожусь: {userSaved.city}, {userSaved.country}</div>
-            <div className={styles.phoneNumber}>Телефон: {profileInfo.phone}</div>
+            <div className={styles.phoneNumber}>Телефон: {userSaved.phone}</div>
             <div className={styles.interestsContainer}>
                 <div className={styles.interestsTitle}>Интересы:</div>
                 <div className={styles.chipContainer}>
@@ -33,7 +42,7 @@ const ProfilePageContent = ({ profileInfo }) => {
             </div>
             <div className={styles.aboutInfo}>
                 <div className={styles.aboutTitle}>О себе:</div>
-                <div className={styles.aboutContent}>{profileInfo.about}</div>
+                <div className={styles.aboutContent}>{userSaved.about}</div>
             </div>
         </div>
     </div>
